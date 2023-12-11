@@ -64,7 +64,7 @@ int main(int argc, char ** argv) {
 //    RemovePointsThroughDepth(classes, groups, prevGoodFeatures, currentGoodFeatures, 3, 3, Vstatus);
     double a = 1.5;
     double b = 1.5;
-    int parts = 5;
+    int parts = 6;
     bool useGlobalInformation = true;
     ClassifyBasedOnXY(classes, a, b, groups, prevGoodFeatures, currentGoodFeatures, Vstatus, parts, useGlobalInformation);
     double length = 0;

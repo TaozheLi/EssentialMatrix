@@ -244,11 +244,6 @@ void ClassifyBasedOnXYAndRemovePoint(const double &a, const double &b,const std:
 //            std::cout<<"run this too: "<<group<<std::endl;
             newGroups[group].push_back(originalIndex);
             length[group].push_back(cv::norm(featurePointCurrent[originalIndex] - featurePointPrev[originalIndex]));
-//            std::cout<<"group : "<<group<<std::endl;
-//            std::cout<<"run here 4"<<std::endl;
-//            if(group == 3){
-//                std::cout<<"i: "<<ComputeAngle(featurePointPrev[originalIndex], featurePointCurrent[originalIndex])<<std::endl;
-//            }
             double _ = ComputeAngle(featurePointPrev[originalIndex], featurePointCurrent[originalIndex]);
             if(_ < -180.0 || _ > 180.0){
                 std::cout<<featurePointPrev[originalIndex]<<" "<<featurePointCurrent[originalIndex]<<std::endl;
@@ -298,8 +293,8 @@ void ClassifyBasedOnXYAndRemovePoint(const double &a, const double &b,const std:
         double std_optflow = std_double(length[i]);
         double avg_angle = avg_double(angle[i]);
         double std_angle = std_double(angle[i]);
-        std::cout<<" xy_group: "<<i<<" mean_optflow: "<<avg_optflow<<" std_optflow: "<<std_optflow;
-        std::cout<<" mean_angle: "<<avg_angle<<std::endl;
+//        std::cout<<" xy_group: "<<i<<" mean_optflow: "<<avg_optflow<<" std_optflow: "<<std_optflow;
+//        std::cout<<" mean_angle: "<<avg_angle<<std::endl;
         for(int each_idx=0; each_idx < newGroups[i].size(); ++each_idx){
             // detect angle rangle
             double optflow = length[i][each_idx];
