@@ -1,3 +1,0 @@
-/Users/simmons/CLionProjects/OpticalFlowTest/cmake-build-debug/CMakeFiles/OpticalFlowTest.dir
-/Users/simmons/CLionProjects/OpticalFlowTest/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/simmons/CLionProjects/OpticalFlowTest/cmake-build-debug/CMakeFiles/rebuild_cache.dir
