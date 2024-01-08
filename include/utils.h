@@ -143,7 +143,8 @@ bool RemovedCondition(const double &opticalFlowLength, const double & mean, cons
         alpha = 0;
     }
     beta = 1 - alpha;
-    if(RemovedConditionOnlyLength(opticalFlowLength, mean, std, a, b) || RemovedConditionOnlyOrientation(a, b, theta, alpha * meanTheta + beta * globalOrientation, stdTheta, false))
+    if(RemovedConditionOnlyLength(opticalFlowLength, mean, std, a, b) || RemovedConditionOnlyOrientation(a, b, theta, alpha * meanTheta + beta * globalOrientation, stdTheta, useGlobalInformation))
+    //if(RemovedConditionOnlyLength(opticalFlowLength, mean, std, a, b))
         return true;
     else
         return false;
@@ -174,7 +175,7 @@ std::vector<double> ComputingGlobalOrientation(const int &parts, const std::vect
         }
     }
     for(int i=0; i<parts; ++i){
-        globalOrientation[i] = (globalOrientation[i] / count[i]);
+        globalOrientation[i] = (globalOrientation[i] / (count[i] + 1e-5));
         std::cout<<"region: "<<i<<" orientation: "<<globalOrientation[i]<<std::endl;
     }
     return globalOrientation;
@@ -184,9 +185,9 @@ bool Converse(std::vector<double> &angles, const double & threshRatio){
     double count = 0.0;
     std::cout<<"start to run converse !!!! "<<std::endl;
     std::cout<<angles.size()<<std::endl;
-    for(int i=0; i<angles.size(); ++i){
-        std::cout<<"i:"<<i<<" angle: "<<angles[i]<<std::endl;
-    }
+//    for(int i=0; i<angles.size(); ++i){
+//        std::cout<<"i:"<<i<<" angle: "<<angles[i]<<std::endl;
+//    }
     for(const auto & angle: angles){
         if(abs(angle) > 90)  count+=1;
     }
@@ -230,7 +231,7 @@ void ClassifyBasedOnXYAndRemovePoint(const double &a, const double &b,const std:
     length.resize(totalClasses);
     newGroups.resize(totalClasses);
     angle.resize(totalClasses);
-    std::cout<<"run here 1"<<std::endl;
+//    std::cout<<"run here 1"<<std::endl;
     double x_cor = 0.0;
     std::vector<int> count_n(30, 0);
     for(int i=0; i<IndexOfOneGroup.size(); ++i){
@@ -240,6 +241,7 @@ void ClassifyBasedOnXYAndRemovePoint(const double &a, const double &b,const std:
             int _row = featurePointPrev[i].y / mw;
             int _col = featurePointPrev[i].x / nw;
             int group = _row * nb + _col;
+            if(group >= 30) group=29;
 //            std::cout<<"run here 3"<<std::endl;
 //            std::cout<<"run this too: "<<group<<std::endl;
             newGroups[group].push_back(originalIndex);
@@ -250,13 +252,14 @@ void ClassifyBasedOnXYAndRemovePoint(const double &a, const double &b,const std:
                 std::exit(-1);
             }
             angle[group].push_back(_);
-            std::cout<<"it push_back successfully"<<std::endl;
+//            std::cout<<"it push_back successfully"<<std::endl;
 //            std::cout<<_<<std::endl;
 //            count_n[group] += 1;
-            x_cor += featurePointPrev[i].x;
-            std::cout<<"run here !!!!"<<std::endl;
+            x_cor += featurePointPrev[originalIndex].x;
+//            std::cout<<"run here !!!!"<<std::endl;
         }
     }
+    std::cout<<"finish this"<<std::endl;
 //    std::cout<<"run here 2"<<std::endl;
 //    for(int i=0; i<angle[3].size(); i++){
 //        std::cout<<"group 3 4 i: "<<i<<" angle: "<<angle[3][i]<<std::endl;
