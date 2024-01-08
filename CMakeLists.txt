@@ -9,5 +9,6 @@ endif(OpenCV_FOUND)
 include_directories("./include/")
 add_executable(OpticalFlowTest main.cpp
         include/OpticalFlow.h
-        include/utils.h)
+        include/utils.h
+        include/EssentailMatrix.h)
 target_link_libraries(OpticalFlowTest ${OpenCV_LIBS})

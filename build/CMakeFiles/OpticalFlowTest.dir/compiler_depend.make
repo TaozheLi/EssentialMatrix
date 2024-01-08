@@ -761,6 +761,7 @@ CMakeFiles/OpticalFlowTest.dir/main.cpp.o: /Users/simmons/CLionProjects/OpticalF
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdint.h \
+  /Users/simmons/CLionProjects/OpticalFlowTest/include/EssentailMatrix.h \
   /Users/simmons/CLionProjects/OpticalFlowTest/include/OpticalFlow.h \
   /Users/simmons/CLionProjects/OpticalFlowTest/include/utils.h \
   /opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/imgproc/segmentation.hpp \
@@ -906,8 +907,6 @@ CMakeFiles/OpticalFlowTest.dir/main.cpp.o: /Users/simmons/CLionProjects/OpticalF
 
 /opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp:
 
-/opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp:
-
 /opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/objdetect/charuco_detector.hpp:
 
 /opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp:
@@ -967,6 +966,8 @@ CMakeFiles/OpticalFlowTest.dir/main.cpp.o: /Users/simmons/CLionProjects/OpticalF
 /opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/imgproc.hpp:
 
 /opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/dnn/dnn.hpp:
+
+/opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/dnn/dict.hpp:
 
 /opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/core/utility.hpp:
 
@@ -1087,6 +1088,10 @@ CMakeFiles/OpticalFlowTest.dir/main.cpp.o: /Users/simmons/CLionProjects/OpticalF
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__chrono/file_clock.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_int64_t.h:
+
+/opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp:
+
+/Users/simmons/CLionProjects/OpticalFlowTest/include/EssentailMatrix.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_int32_t.h:
 
@@ -1547,8 +1552,6 @@ CMakeFiles/OpticalFlowTest.dir/main.cpp.o: /Users/simmons/CLionProjects/OpticalF
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/has_unique_object_representation.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/extent.h:
-
-/opt/homebrew/Cellar/opencv/4.8.1_4/include/opencv4/opencv2/dnn/dict.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_for_each_n.h:
 
